@@ -1,0 +1,24 @@
+{
+  "folders": [
+	{
+		"name": "Demo",
+		"path": "../Demo"
+	},
+	{
+		"name": "Native javascript Labb2",
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "Native javascript Labb2",
+    "editor.formatOnSave": true,
+    "editor.fontSize": 14,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": true,
+    "prettier.requireConfig": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+    "editor.guides.bracketPairs": true,
+    "git.ignoreLimitWarning": true
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food search</title>
+    <link rel="stylesheet" href="search.css" />
+  </head>
+  <body>
+    <header>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="index.html" class="active" id="home-nav">Home</a>
+          </li>
+          <li>
+            <a href="search.html" id="search-nav">Search</a>
+          </li>
+          <li>
+            <a href="generator.html" id="generator-nav">Generator</a>
+          </li>
+
+          <li>
+            <a href="contact.html" id="contact-nav">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="card">
+      <div id="heading">
+        <h1 id="header_text">Search</h1>
+      </div>
+      <div id="errors"></div>
+      <div id="form-div">
+        <input id="input-search" type="text" placeholder="Search... " />
+        <button id="formButton">Search</button>
+      </div>
+      <div id="mealContainer">
+        <!-- I denna diven vill jag ha bild på maträtt, ingredienser, instruktioner på tillagagning -->
+        <!-- <div id="picDiv">
+          <img
+            src="https://source.unsplash.com/1600x900/?ocean"
+            alt="Picture of random meal"
+            id="pic-of-random-meal"
+          />
+        </div> -->
+      </div>
+    </div>
+    <script src="search.js"></script>
+  </body>
+</html>

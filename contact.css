@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  max-width: 100%;
+  background-color: rgb(223, 217, 221);
+}
+
+h1 {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  color: rgb(65, 62, 62);
+}
+/* --NAVBAR--------------------------------- */
+
+header {
+  max-width: 100%;
+  max-height: 80px;
+  background: rgb(250, 246, 246);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav ul li a {
+  display: block;
+  color: rgb(27, 26, 26);
+  font-size: 20px;
+  padding: 10px 25px;
+  transition: 0.7s ease;
+  margin: 0 5px;
+}
+
+.nav ul li a:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  font-size: 3vw;
+}
+
+h1 {
+  font-size: clamp(3rem, 1rem + 5vw, 5rem);
+}
+
+/* ------------------------------------------- */
+/* FORMULÄR  */
+
+.card {
+  max-width: 100%;
+  background-color: white;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-radius: 1em;
+}
+
+form > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+}
+
+label,
+input[type="text"] {
+  margin-top: 3em;
+  max-width: 100%;
+}
+
+label {
+  margin-left: 1em;
+  margin-bottom: 4em;
+}
+
+input[type="text"] {
+  max-width: 100%;
+}
+
+#sendButton {
+  margin: 10px;
+  border-radius: 10px;
+  padding: 1%;
+  transition: 0.2s ease-in-out;
+  margin-bottom: 2em;
+  border: none;
+  border-radius: 2em;
+  min-width: 10em;
+  min-height: 4em;
+  opacity: 0.8;
+  color: rgb(48, 47, 47);
+}
+
+#sendButton:hover {
+  background: #7c7c7c6b;
+}
+
+/* ----FORMULÄR ERROR-------------- */
+
+#errors {
+  padding-top: 3em;
+  padding-left: 40%;
+}
+
+#p-error {
+  font-size: large;
+}
+.error-color {
+  color: red;
+  font-size: medium;
+}
+
+/* ----------------------------------- */
+@media (max-width: 532px) {
+  /* NAVBAR----- */
+  header {
+    padding: 0 20px;
+  }
+  .nav ul li a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    font-size: 6vw;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger .line {
+    width: 20px;
+    height: 2px;
+    background: black;
+    color: rgb(27, 26, 26);
+    margin: 6px 0;
+  }
+
+  .nav {
+    position: absolute;
+    height: 450px;
+    top: 30px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: rgb(250, 246, 246);
+    transition: 0.2s;
+    display: none;
+  }
+
+  .nav.active {
+    height: 335px;
+    display: block;
+  }
+
+  .nav ul {
+    display: block;
+    margin: 80px auto 0 auto;
+    text-align: center;
+  }
+
+  .nav ul li a {
+    margin-bottom: 12px;
+    transition: 0.7s ease;
+  }
+
+  /* ------------------- */
+
+  label {
+    margin: 1em;
+    font-size: 4vw;
+  }
+
+  form > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form > .fname-and-lname {
+    flex-direction: column;
+  }
+
+  #errors {
+    padding-top: 1em;
+  }
+
+  label,
+  input[type="text"] {
+    margin-top: 1em;
+  }
+
+  .list:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    font-size: 5vw;
+  }
+}

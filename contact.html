@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <header>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="index.html" class="active" id="home-nav">Home</a>
+          </li>
+          <li>
+            <a href="search.html" id="search-nav">Search</a>
+          </li>
+          <li>
+            <a href="generator.html" id="generator-nav">Generator</a>
+          </li>
+          <li>
+            <a href="contact.html" id="contact-nav">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h1 id="header_text">Contact us</h1>
+    <div class="card">
+      <div id="errors"></div>
+      <form action="">
+        <div class="fname-and-lname" id="form-input">
+          <label for="firstName">First name</label>
+          <input type="text" id="firstName" placeholder="" />
+          <label for="lastName">Last name</label>
+          <input type="text" id="lastName" placeholder="" />
+        </div>
+        <div id="text-input-div">
+          <label for="text"></label>
+          <textarea
+            id="input-text"
+            cols="50"
+            rows="10"
+            placeholder="Write something"
+          ></textarea>
+        </div>
+        <div id="button">
+          <input type="button" id="sendButton" value="send" />
+        </div>
+      </form>
+    </div>
+    <script src="contact.js"></script>
+  </body>
+</html>

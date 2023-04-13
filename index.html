@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="index.html" class="active" id="home-nav">Home</a>
+          </li>
+          <li>
+            <a href="search.html" id="search-nav">Search</a>
+          </li>
+          <li>
+            <a href="generator.html" id="generator-nav">Generator</a>
+          </li>
+          <li>
+            <a href="contact.html" id="contact-nav">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <span>
+      <h1 id="header-text">What do you want to eat today?</h1>
+    </span>
+    <div id="card">
+      <div id="position-button">
+        <button id="navigate-button">Feeling hungry?</button>
+      </div>
+      <video autoplay loop muted playsinline class="video">
+        <source id="background-pic" src="background.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <footer>
+      <h3>Reviews</h3>
+      <div id="comments">
+        <div class="comment">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
+            iusto?
+          </p>
+          <p class="editor">Adam</p>
+        </div>
+        <div class="comment">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio cum
+            voluptatibus reiciendis, perferendis officiis dicta.
+          </p>
+          <p class="editor">Peter</p>
+        </div>
+        <div class="comment">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit
+            culpa, similique expedita nesciunt officia mollitia repellat
+            voluptate deleniti animi sunt!
+          </p>
+          <p class="editor">Lucy</p>
+        </div>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -15,4 +15,4 @@ I also made the webpage responsive.
 
 ### Github pages:
 
-https://theethee.github.io/Native-javascript/
+https://theethee.github.io/Native-javascript-project/

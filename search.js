@@ -51,21 +51,27 @@ function handleInput() {
 }
 
 function handleSearch() {
-  // hanterar säkning på maträtt
+  // hanterar maträtt beroende på vad användaren skriver in
   let input = document.querySelector("#input-search").value;
  
+  // fetchar API och användarens input
     fetch(url + input)
+    // tas emot bearbetar JSON
       .then((response) => response.json())
       .then((data) => {
+        // åtkomst till info om maträtt i index 0
         let getMeal = data.meals[0];
 
         // console.log(getMeal);
 
+        // tom array
         let ingredients = [];
         let number = 1;
 
+        // loopar för att hitta ingredienser och mått
         for (let i in getMeal) {
           if (i.startsWith("strIngredient") && getMeal[i]) {
+            // lägger in i arrayen
             ingredients.push(
               `${getMeal[i]} - ${getMeal["strMeasure" + number]} `
             );
@@ -73,6 +79,7 @@ function handleSearch() {
           }
         }
 
+        // Visar bild, och all info om maträtten
         mealRes.innerHTML = `
 
   <div id="result-pic-div"><img src=${getMeal.strMealThumb} id="result-pic" alt="picture-of-meal"></div>
@@ -86,7 +93,7 @@ function handleSearch() {
 
   </div>
   `;
-
+        // skapar lika många li-element som det finns ingredienser i ul
         for (let j = 0; j < ingredients.length; j++) {
           let createLi = document.createElement("li");
           createLi.innerText = ingredients[j];

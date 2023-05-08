@@ -1,5 +1,5 @@
 // HANTERA NAV------------------------
-
+// navigerar till länkar i nav
 document.querySelector("#home-nav").addEventListener("click", () => {
   location.href = "index.html";
 });
@@ -31,6 +31,8 @@ let navbar = document.querySelector(".nav");
 let headerTxt = document.querySelector("#header-text");
 let navButton = document.querySelector("#navigate-button");
 
+
+// Öppnar och stänger hamburgarmenyn
 hamburger.addEventListener("click", () => {
   navbar.classList.toggle("active");
 });

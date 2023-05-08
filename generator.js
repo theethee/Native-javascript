@@ -1,5 +1,5 @@
 // HANTERA NAV------------------------
-
+// navigerar till länkar i nav
 document.querySelector("#home-nav").addEventListener("click", () => {
   location.href = "index.html";
 });
@@ -19,26 +19,35 @@ document.querySelector("#contact-nav").addEventListener("click", () => {
 
 const mealRes = document.querySelector("#mealContainer");
 const mealName = document.querySelector("#meal-name");
-const picUnsplash = document.querySelector("#pic-of-random-meal");
+
 
 const url = "https://www.themealdb.com/api/json/v1/1/random.php";
 const button = document.querySelector("#formButton");
+// hanterar klick och handleSearch-funktionen körs
 button.addEventListener("click", handleSearch);
 
 function handleSearch() {
-  fetch(url)
+  // fetchar API:n
+  fetch(url) 
+  // konverterar API till JSON
     .then((response) => response.json())
+    // hanterar JSON data
     .then((data) => {
+      // tilldelar första maträtten i API:n
       let getMeal = data.meals[0];
 
       console.log(getMeal);
-
+      // skapar tom array för ingredienser för maträtten
       let ingredients = [];
 
+      // number används för att hämta ingredienser och mått i maträtten
       let number = 1;
 
+    
       for (let i in getMeal) {
+        // kollar om i börjar med strIngredient och att värdet inte är tomt
         if (i.startsWith("strIngredient") && getMeal[i]) {
+          // pushar in alla ingredienser och mått
           ingredients.push(
             `${getMeal[i]} - ${getMeal["strMeasure" + number]} `
           );
@@ -46,6 +55,7 @@ function handleSearch() {
         }
       }
 
+      // Lägger in info på maträtt i html
       mealRes.innerHTML = `
 
     <div id="result-pic-div"><img src=${getMeal.strMealThumb} id="result-pic" alt="picture-of-meal"></div>
@@ -60,6 +70,7 @@ function handleSearch() {
     </div>
     `;
 
+    // skapar li-element till varje ingredient i ul-elementet
       for (let j = 0; j < ingredients.length; j++) {
         let createLi = document.createElement("li");
         createLi.innerText = ingredients[j];
@@ -73,6 +84,8 @@ function handleSearch() {
 let hamburger = document.querySelector(".hamburger");
 let navbar = document.querySelector(".nav");
 
+
+// Öppnar och stänger hamburgarmenyn
 hamburger.addEventListener("click", () => {
   navbar.classList.toggle("active");
 });

@@ -1,3 +1,5 @@
+
+ // navigerar till länkar i nav
 document.querySelector("#home-nav").addEventListener("click", () => {
   location.href = "index.html";
 });
@@ -15,9 +17,10 @@ document.querySelector("#contact-nav").addEventListener("click", () => {
 });
 // -----------------------------------
 
+// resultatet av sökningen visas sökningen är klar
 const mealRes = document.querySelector("#mealContainer");
+// Namn på maträtten visas när sökningen är klar
 const mealName = document.querySelector("#meal-name");
-const picUnsplash = document.querySelector("#pic-of-random-meal");
 
 const url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
@@ -25,29 +28,32 @@ const button = document.querySelector("#formButton");
 const inputField = document.querySelector("#input-search");
 
 // -----------------------------------
+
+// anropar funktionen när man klickar på knappen
 button.addEventListener("click", handleSearch);
+// Anropar funktionen när användare ändrar i textfält
 inputField.addEventListener("input", handleInput);
 let errors = document.querySelector("#errors");
 
 function handleInput() {
   let inputField = document.querySelector("#input-search");
+  // om textfältet är tomt
   if (inputField.value === "") {
+    // Visa felmeddelande
     errors.style.display = "block";
     errors.innerHTML = `
     <p class="error-color">Error:</p>
     <p class="error-color">Please type something</p>`;
   } else {
+    // Annars dölj felmeddelande
     errors.style.display = "none";
   }
 }
 
 function handleSearch() {
+  // hanterar säkning på maträtt
   let input = document.querySelector("#input-search").value;
-  if (input === "") {
-    picUnsplash.style.display = "block";
-
-    return;
-  } else {
+ 
     fetch(url + input)
       .then((response) => response.json())
       .then((data) => {
@@ -88,13 +94,15 @@ function handleSearch() {
         }
       });
   }
-}
+
 
 // -----------------------------------------
 
 let hamburger = document.querySelector(".hamburger");
 let navbar = document.querySelector(".nav");
 
+
+// Öppnar och stänger hamburgarmenyn
 hamburger.addEventListener("click", () => {
   navbar.classList.toggle("active");
 });
